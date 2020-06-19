@@ -29,7 +29,8 @@
             class={{if this.mobilelabels "hidden-on-mobile"}} 
             @text="This action can be triggered only by users with push access to the repository" />
         {{/if}}
-      <button 
+      <button
+        data-test-repo-actions-prioritize-button
         type="button"
         class="action-button--prioritize"
         {{on 'click' (fn (mut this.showPrioritizeBuildModal) true)}}
